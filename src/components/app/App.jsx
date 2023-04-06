@@ -10,18 +10,12 @@ const App = () => {
   const [bad, setBad] = useState(0);
 
   const handleChange = i => {
-    switch (i) {
-      case 'good':
-        setGood(good => good + 1);
-        break;
-      case 'neutral':
-        setNeutral(neutral => neutral + 1);
-        break;
-      case 'bad':
-        setBad(bad => bad + 1);
-        break;
-      default:
-        return;
+    if (i === 'good') {
+      setGood(good => good + 1);
+    } else if (i === 'neutral') {
+      setNeutral(neutral => neutral + 1);
+    } else if (i === 'bad') {
+      setBad(bad => bad + 1);
     }
   };
 
